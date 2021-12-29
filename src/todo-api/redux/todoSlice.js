@@ -33,7 +33,6 @@ const todoSlice = createSlice({
   },
   reducers: {
     toggleTodo(state, action) {
-      console.log("action >>>", action);
       const todoId = action.payload;
       state.todoList = state.todoList.map((todo) => {
         if (todo.id === todoId) todo.completed = !todo.completed;

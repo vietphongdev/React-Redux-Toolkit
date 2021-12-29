@@ -1,11 +1,10 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { fetchTodo, toggleTodo, deleteTodo } from "../store/reducers/todoSlice";
+import { fetchTodo, toggleTodo, deleteTodo } from "../redux/todoSlice";
 import TodoForm from "./TodoForm";
 
 const Todos = () => {
   const { todoList } = useSelector((state) => state.todoReducer);
-  console.log("todoList >>>", todoList);
   const dispatch = useDispatch();
 
   const handleInputChange = (todoId) => {
